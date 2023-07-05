@@ -15,14 +15,31 @@ function crazySum (num1 , num2) {
 
 const risultato = crazySum(30 , 20)
 
+console.log("Primo esercizio")
 console.log(risultato)
+console.log(" ")
+
 
 
 /* ESERCIZIO 2
- Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
+Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20
+e 100 (incluso) o se è esattamente uguale a 400.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function boundary (num3) {
+    let booleanTrue = true
+    let booleanFalse = false
+    if (num3 >= 20 && num3 <= 100 || num3 === 400) {
+        return booleanTrue
+    }
+    else {return booleanFalse}
+} 
+
+    console.log("Secondo esercizio")
+    console.log(boundary(400))
+    console.log(" ")
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
@@ -30,17 +47,57 @@ console.log(risultato)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function reverseString (string) {
+    let strReverse = string.split("")
+    let strArray = strReverse.reverse()
+    let joinArray = strArray.join("")
+    return joinArray
+}
+
+console.log("Terzo esercizio")
+console.log(reverseString("hello, i'm Gianni!"))
+console.log(" ")
+
 /* ESERCIZIO 4
- Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
+ Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale
+  di ogni parola.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function upperFirst(string1){
+   let arr = []
+   arr = string1.split(" ");
+   for (let i = 0; i < arr.length; i++) {
+   arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+   }
+   let finefrase = arr.join(" ");
+   return finefrase
+   }
+
+   console.log("Quarto esercizio")
+   console.log(upperFirst("ciao mi chiamo gianni"));
+   console.log(" ")
 
 /* ESERCIZIO 5
- Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
+Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri
+random contenuti tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function giveMeRandom(n) {
+    randomNumber = []
+
+    for (i = 0; i < n; i++){
+        randomNumber.push(Math.floor(Math.random() * 11))
+    }
+    return randomNumber 
+}
+
+console.log("Quinto esercizio")
+console.log(giveMeRandom(20))
+console.log(" ")
 
 //EXTRA:
 /* ESERCIZIO 1
